@@ -1,0 +1,57 @@
+[
+    {
+        "id": 0,
+        "customerName": "John Doe",
+        "phoneNumber": "1234567890",
+        "address": "1230 main st",
+        "loanAmount": 5000,
+        "interest": 5,
+        "loanTermYears": 10,
+        "loanType": "Education",
+        "description": "education loan"
+    },
+    {
+        "id": 1,
+        "customerName": "John Smith",
+        "phoneNumber": "1234567891",
+        "address": "1231 main st",
+        "loanAmount": 12000,
+        "interest": 11,
+        "loanTermYears": 30,
+        "loanType": "Education",
+        "description": "education loan"
+    },
+    {
+        "id": 2,
+        "customerName": "Jane Smith",
+        "phoneNumber": "1234567892",
+        "address": "1232 main st",
+        "loanAmount": 25000,
+        "interest": 15,
+        "loanTermYears": 10,
+        "loanType": "Auto",
+        "description": "Auto loan"
+    },
+    {
+        "id": 3,
+        "customerName": "Jane Doe",
+        "phoneNumber": "1234567893",
+        "address": "1233 main st",
+        "loanAmount": 30000,
+        "interest": 13,
+        "loanTermYears": 15,
+        "loanType": "Auto",
+        "description": "Auto loan"
+    },
+    {
+        "id": 4,
+        "customerName": "Rob Smith",
+        "phoneNumber": "1234567894",
+        "address": "1234 main st",
+        "loanAmount": 500000,
+        "interest": 10,
+        "loanTermYears": 30,
+        "loanType": "Home",
+        "description": "home loan"
+    }
+]
