@@ -1,6 +1,6 @@
 const loanCalc = (loan) => {
-    // compound interest formula FV = PV(1 + i)^N
-    // assume monthly payments
+    // one compound interest formula FV = PV(1 + i)^N
+    // assuming monthly payments
     let PV = loan.loanAmount;
     let N = loan.loanTermYears * 12;
     let i = (loan.interest / 12) / 100;
@@ -17,6 +17,7 @@ module.exports = (htmlStr, loan) => {
     output = output.replace(/{%AMOUNT%}/g, loan.loanAmount);
     output = output.replace(/{%INTEREST%}/g, loan.interest);
     output = output.replace(/{%YEARS%}/g, loan.loanTermYears);
+    // output the calculation to the website page
     output = output.replace(/{%TOTAL%}/g, loanCalc(loan));
     output = output.replace(/{%ID%}/g, loan.id);
     return output;
