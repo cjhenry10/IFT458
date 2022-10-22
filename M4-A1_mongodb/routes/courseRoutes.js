@@ -4,13 +4,13 @@ const router = express.Router();
 
 router
   .route('/')
-  .get(courseController.getAllcourses)
-  .post(courseController.createcourse);
+  .get(courseController.getAllCourses)
+  .post(courseController.createCourse);
 
 router
   .route('/:id')
-  .get(courseController.getcourse)
-  .patch(courseController.updatecourse)
-  .delete(courseController.deletecourse);
+  .get(courseController.getCourse)
+  .patch(courseController.updateCourse)
+  .delete(courseController.deleteCourse);
 
 module.exports = router;

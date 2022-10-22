@@ -1,23 +1,24 @@
 //** Code START
-const Course = require('./../models/courseModel');
-const APIFeatures = require('./../databaseManager/courseDbContext');
+const Customer = require('./../models/customerModel');
+//this doesn't need to change
+const APIFeatures = require('./../databaseManager/loanDbContext');
 
-exports.getAllCourses = async (req, res) => {
+exports.getAllCustomers = async (req, res) => {
   try {
     // EXECUTE QUERY
-    const features = new APIFeatures(Course.find(), req.query)
+    const features = new APIFeatures(Customer.find(), req.query)
       .filter()
       .sort()
       .limitFields()
       .paginate();
-    const courses = await features.query;
+    const customers = await features.query;
 
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',
-      results: courses.length,
+      results: customers.length,
       data: {
-        courses
+        customers
       }
     });
   } catch (err) {
@@ -28,15 +29,15 @@ exports.getAllCourses = async (req, res) => {
   }
 };
 
-exports.getCourse = async (req, res) => {
+exports.getCustomer = async (req, res) => {
   try {
-    const course = await Course.findById(req.params.id);
-    // Course.findOne({ _id: req.params.id })
+    const customer = await Customer.findById(req.params.id);
+    // Customer.findOne({ _id: req.params.id })
 
     res.status(200).json({
       status: 'success',
       data: {
-        course
+        customer
       }
     });
   } catch (err) {
@@ -47,17 +48,17 @@ exports.getCourse = async (req, res) => {
   }
 };
 
-exports.createCourse = async (req, res) => {
+exports.createCustomer = async (req, res) => {
   try {
-    // const newCourse = new Course({})
-    // newCourse.save()
+    // const newCustomer = new Customer({})
+    // newCustomer.save()
 
-    const newCourse = await Course.create(req.body);
+    const newCustomer = await Customer.create(req.body);
 
     res.status(201).json({
       status: 'success',
       data: {
-        course: newCourse
+        customer: newCustomer
       }
     });
   } catch (err) {
@@ -68,9 +69,9 @@ exports.createCourse = async (req, res) => {
   }
 };
 
-exports.updateCourse = async (req, res) => {
+exports.updateCustomer = async (req, res) => {
   try {
-    const course = await Course.findByIdAndUpdate(req.params.id, req.body, {
+    const customer = await Customer.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true
     });
@@ -78,7 +79,7 @@ exports.updateCourse = async (req, res) => {
     res.status(200).json({
       status: 'success',
       data: {
-        course
+        customer
       }
     });
   } catch (err) {
@@ -89,9 +90,9 @@ exports.updateCourse = async (req, res) => {
   }
 };
 
-exports.deleteCourse = async (req, res) => {
+exports.deleteCustomer = async (req, res) => {
   try {
-    await Course.findByIdAndDelete(req.params.id);
+    await Customer.findByIdAndDelete(req.params.id);
 
     res.status(204).json({
       status: 'success',
