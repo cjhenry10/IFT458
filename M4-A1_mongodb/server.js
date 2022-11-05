@@ -5,7 +5,7 @@ const app = require('./app');
 //new code
 const mongoose = require('mongoose');
 
-const password = encodeURIComponent(process.env.DB_PASSWORD)
+const password = encodeURIComponent(process.env.DB_PASSWORD);
 
 const MONGO_DATA_BASE = process.env.DATABASE.replace('<password>', password);
 
