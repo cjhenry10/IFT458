@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      title(#title)
+
+  body
+    header.header
+      nav.nav.nav--course
+        a.nav__el(href='/allcourses') All courses
+        a.nav__el(href='/allloans') All loans
+        form.nav__search
+          button.nav__search-btn
+            svg
+              use(xlink:href='img/icons.svg#icon-search')
+          input(type='text' placeholder='Search courses')
+      .header__logo
+        img(src='/img/logo.png' alt='Course logo')
+      nav.nav.nav--user
+        a.nav__el.nav__el--logout Log out
+        a.nav__el(href='/me')
+          img.nav__user-img(src='/img/users/user.png' alt='user phpto')
+          span Student 
+    
+
+    section.section-header
+      div.heading-box
+        h1.heading-primary
+          span Trending Current Course test
+
+    
+        div.description-box
+          h2.heading-secondary.ma-bt-lg About the trending Course
+            p.description__text These are the courses avaialable this spring
+
+    div.footer
+      div.footer__logo
+        img(src='img/logo.png' alt='Course logo')
+      ul.footer__nav
+        li 
+          a(href='#') About us
+        li
+          a(href='#') Download Course information
+        li
+          a(href='#') Sign up for the Course
+        li
+          a(href='#') Careers
+        li
+          a(href='#') Contact
+
+      p.footer__copyright &copy; by Student Learners.

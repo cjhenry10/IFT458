@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      title All Loans
+
+  body
+    header.header
+      nav.nav.nav--course
+        a.nav__el(href='/') Home
+        form.nav__search
+          button.nav__search-btn
+            svg
+              use(xlink:href='img/icons.svg#icon-search')
+          input(type='text' placeholder='Search courses')
+      .header__logo
+        img(src='/img/logo.png' alt='Course logo')
+      nav.nav.nav--user
+        a.nav__el.nav__el--logout Log out
+        a.nav__el(href='/me')
+          img.nav__user-img(src='/img/users/user.png' alt='user phpto')
+          span Student 
+    
+
+    block content 
+  h1 This is dynamic loan Overview
+  div
+    table.table-header
+      thead
+        tr
+          th(scope='ID') #
+          th(scope='col') Customer Name
+          th(scope='col') Address
+          th(scope='col') Amount
+          th(scope='col') Interest Rate
+          th(scope='col') Loan Type
+      tbody
+        each loan in loans 
+          tr.table-secondary
+            td=loan.id
+            td=loan.customerName
+            td=loan.address
+            td=loan.loanAmount
+            td=loan.interest
+            td=loan.loanType
+
+    div.footer
+      div.footer__logo
+        img(src='img/logo.png' alt='Course logo')
+      ul.footer__nav
+        li 
+          a(href='#') About us
+        li
+          a(href='#') Download Course information
+        li
+          a(href='#') Sign up for the Course
+        li
+          a(href='#') Careers
+        li
+          a(href='#') Contact
+
+      p.footer__copyright &copy; by Student Learners.

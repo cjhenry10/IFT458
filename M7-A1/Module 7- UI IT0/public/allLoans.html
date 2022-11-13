@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,700">
+    <title>All Loans</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav nav--course"><a class="nav__el" href="/">Home</a>
+        <form class="nav__search">
+          <button class="nav__search-btn">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+          <input type="text" placeholder="Search courses">
+        </form>
+      </nav>
+      <div class="header__logo"><img src="/img/logo.png" alt="Course logo"></div>
+      <nav class="nav nav--user"><a class="nav__el nav__el--logout">Log out</a><a class="nav__el" href="/me"><img class="nav__user-img" src="/img/users/user.png" alt="user phpto"><span>Student </span></a></nav>
+    </header>
+  </body>
+  <h1>This is dynamic loan Overview</h1>
+  <div>
+    <table class="table-header">
+      <thead>
+        <tr>
+          <th scope="ID">#</th>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Interest Rate</th>
+          <th scope="col">Loan Type</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tr class="table-secondary">
+        <td>0</td>
+        <td>John Doe</td>
+        <td>1230 main st</td>
+        <td>5000</td>
+        <td>5</td>
+        <td>Education</td>
+      </tr>
+      <tr class="table-secondary">
+        <td>1</td>
+        <td>John Smith</td>
+        <td>1231 main st</td>
+        <td>12000</td>
+        <td>11</td>
+        <td>Education</td>
+      </tr>
+      <tr class="table-secondary">
+        <td>2</td>
+        <td>Jane Smith</td>
+        <td>1232 main st</td>
+        <td>25000</td>
+        <td>15</td>
+        <td>Auto</td>
+      </tr>
+      <tr class="table-secondary">
+        <td>3</td>
+        <td>Jane Doe</td>
+        <td>1233 main st</td>
+        <td>30000</td>
+        <td>13</td>
+        <td>Auto</td>
+      </tr>
+      <tr class="table-secondary">
+        <td>4</td>
+        <td>Rob Smith</td>
+        <td>1234 main st</td>
+        <td>500000</td>
+        <td>10</td>
+        <td>Home</td>
+      </tr>
+    </table>
+    <div class="footer">
+      <div class="footer__logo"><img src="img/logo.png" alt="Course logo"></div>
+      <ul class="footer__nav">
+        <li> <a href="#">About us</a></li>
+        <li><a href="#">Download Course information</a></li>
+        <li><a href="#">Sign up for the Course</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p class="footer__copyright">&copy; by Student Learners.</p>
+    </div>
+  </div>
+</html>
