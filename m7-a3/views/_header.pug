@@ -1,0 +1,16 @@
+header.header
+    nav.nav.nav--course
+        a.nav__el(href='/allLoans') All Loans
+        form.nav__search
+            button.nav__search-btn
+                svg
+                    use(xlink:href='img/icons.svg#icon-search')
+            input(type='text' placeholder='Search courses')
+    .header__logo
+        img(src='/img/logo.png' alt='Course logo')
+    nav.nav.nav--user
+        a.nav__el.nav__el(href='/login') Login
+        a.nav__el.nav__el(href='/signup') Sign Up
+        a.nav__el(href='/me')
+            img.nav__user-img(src='/img/users/user.png' alt='user phpto')
+            span Customer 
