@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "66d6918a-a960-4749-81e9-b16bffcdfb16",
+		"name": "m8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20544659"
+	},
+	"item": [
+		{
+			"name": "get all loans Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/loans/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loans",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create loan Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanNumber\": 2,\r\n    \"loanAmount\": 500000,\r\n    \"loanTermYears\": 30,\r\n    \"interestRate\": 5,\r\n    \"loanType\": \"Home\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/loans/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\": \"Test\",\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"testing123\",\r\n    \"passwordConfirm\": \"testing123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

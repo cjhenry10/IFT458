@@ -9,6 +9,7 @@ const authController = require('./../controllers/authController');
 const router = express.Router();
 router.post('/signup', authController.signup);
 router.post('/login', userController.sign_in);
+router.get('/api/users', userController.getAllUsers);
 // router
 //   .route('/')
 //   .get(userController.getAllUsers)
