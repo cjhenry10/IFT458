@@ -1,0 +1,22 @@
+extends baseTemplate
+
+block content 
+  h1 This is single loan view
+  div
+    table.table-header
+      thead
+        tr
+          th(scope='ID') #
+          th(scope='col') Start Date
+          th(scope='col') Years
+          th(scope='col') Amount
+          th(scope='col') Interest Rate
+          th(scope='col') Loan Type
+      tbody
+          tr.table-secondary
+            td=loan.loanNumber
+            td=loan.loanStartDateString
+            td=loan.loanTermYears
+            td=loan.loanAmount
+            td=loan.interestRate
+            td=loan.loanType

@@ -1,0 +1,24 @@
+extends baseTemplate
+
+block content 
+  h1 This is dynamic loan Overview
+  div
+    table.table-header
+      thead
+        tr
+          th(scope='ID') #
+          th(scope='col') Start Date
+          th(scope='col') Years
+          th(scope='col') Amount
+          th(scope='col') Interest Rate
+          th(scope='col') Loan Type
+      tbody
+        each loan in loans 
+          tr.table-secondary
+            td
+              a(href=`/loans/${loan.loanNumber}`)=loan.loanNumber
+            td=loan.loanStartDateString
+            td=loan.loanTermYears
+            td=loan.loanAmount
+            td=loan.interestRate
+            td=loan.loanType

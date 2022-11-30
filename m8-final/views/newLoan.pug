@@ -1,0 +1,41 @@
+extends baseTemplate 
+
+block content
+  main.main
+    .card-container
+      .card
+        .card__header
+          h1.heading-tertirary
+            span Sign In
+        .card__details
+          h4.card__sub-heading New Customer
+          p.card__text.
+            
+            Please enter the following Details
+            
+          .card__data
+            svg.card__icon
+              use(href='img/icons.svg#icon-map-pin')
+            form(action='/loans/create' method='POST')
+              label(for='loanNumber') Loan Number:
+              input#loanNumber(type='number', name='loanNumber')
+              br
+              br
+              label(for='loanAmount') Loan Amount:
+              input#loanAmount(type='number', name='loanAmount')
+              br
+              br
+              label(for='loanTermYears') Loan Years:
+              input#loanTermYears(type='number', name='loanTermYears')
+              br
+              br
+              label(for='interestRate') Loan Interest:
+              input#interestRate(type='number', name='interestRate')
+              br
+              br
+              label(for='loanType') Loan Type:
+              input#loanType(type='text', name='loanType')
+              br
+              br
+              input.card__sub-heading(type='submit', value='Submit')
+
